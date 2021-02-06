@@ -106,11 +106,7 @@ int __find_open64(const char *pathname, int flags, mode_t mode)
     return _old_open64(pathname,flags,mode);
 }
 
-int open64(const char *pathname, int flags, mode_t mode)
-{
-    flags &= ~ (O_DIRECT | O_SYNC);
-    return _old_open64(pathname,flags,mode);
-}
+
 
 /* openat */
 #undef openat
