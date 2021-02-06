@@ -1,0 +1,9 @@
+#! /bin/sh
+
+for N in various things you-expect ; do
+    echo -n "Checking for $N..."
+    sleep 1
+    echo "OK"
+done
+echo "# Configure complete"
+echo "run make install"

@@ -1,0 +1,41 @@
+#! /bin/bash
+#
+# nosync - crazy preload to disable sync() function call
+# for days when we just don't want to sync() (similar to
+# nohup, just more sync than HUP).
+#
+# These libc functions are trapped in dynamically linked 
+# executables and stripped of their sync features:
+#
+#  open
+#  openat
+#  fcntl
+#  sync
+#  fdatasync
+#  fsync
+#  sync_file_range
+#     
+# Usage: nosync command-to-run-parameters
+#
+if ! [ "$1" ] ; then
+    echo 1>&2 "Usage: $0 command-to-run-parameters"
+    echo 1>&2 ""
+    echo 1>&2 "e.g.   $0 /bin/bash"
+    echo 1>&2 "e.g.   $0 /etc/init.d/mysqld restart"
+    echo 1>&2 ""
+    echo 1>&2 "nosync runs the command, but does not honour sync() requests."
+    exit 2
+fi
+
+# Compile and run:
+
+DIR=`dirname $0`
+[ "${DIR:0:1}" = "/" ] || DIR="$PWD/$DIR"
+NOSYNC_SO=$DIR/nosync.so
+if ! [ -f $NOSYNC_SO ] ; then
+    gcc -Wall -fPIC -shared -o $NOSYNC_SO $DIR/nosync.c -lc -ldl
+fi
+
+LD_PRELOAD=$NOSYNC_SO exec "$@"
+echo 1>&2 "$0: cannot exec $@"
+exit 1
