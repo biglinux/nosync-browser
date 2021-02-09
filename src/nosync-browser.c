@@ -17,7 +17,7 @@
  * 
  *  compile with gcc, or use the attached wrapper:
  *
- *    gcc -Wall -fPIC -shared -o nosync.so nosync.c -lc -ldl
+ *    gcc -Wall -fPIC -shared -o nosync-browser.so nosync-browser.c -lc -ldl
  * 
  *   (c) 2011 
  *   Licence: GNU Public Licence version 2 or above

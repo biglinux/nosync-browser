@@ -18,6 +18,6 @@
 # Usage: nosync command-to-run-parameters
 #
 
-LD_PRELOAD=/usr/lib/nosync.so exec "$@"
+LD_PRELOAD=/usr/lib/nosync-browser.so exec "$@"
 echo 1>&2 "$0: cannot exec $@"
 exit 1

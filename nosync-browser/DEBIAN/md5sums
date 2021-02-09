@@ -1,0 +1,4 @@
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+a9b46c69b5118acfd3f092469194be0e  DEBIAN/control
+4db8cfc10a5eacdc2a9dc8c54bfd4bc4  usr/bin/nosync-browser
+74e8379faf0b2893f0ec115dc78f5e34  usr/lib/nosync-browser.so

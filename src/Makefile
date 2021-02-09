@@ -1,17 +1,17 @@
 VERSION=0.2
-SOURCES=configure  Makefile  nosync  nosync.c  
+SOURCES=configure  Makefile  nosync-browser  nosync-browser.c  
 
-all: nosync.so
+all: nosync-browser.so
 
-nosync.so: nosync.c
-	gcc -Wall -fPIC -shared -o nosync.so nosync.c -lc -ldl
+nosync-browser.so: nosync-browser.c
+	clang -Wall -fPIC -shared -o nosync-browser.so nosync-browser.c -lc -ldl
 
 install:
-	install -m 0755 nosync /usr/bin
-	install -m 0644 nosync.so /usr/lib
+	install -m 0755 nosync-browser /usr/bin
+	install -m 0644 nosync-browser.so /usr/lib
 
 dist:
-	mkdir nosync-$(VERSION)
-	cp $(SOURCES) nosync-$(VERSION)
-	tar -czf nosync-$(VERSION).tar.gz nosync-$(VERSION)
-	rm -r nosync-$(VERSION)
+	mkdir nosync-browser-$(VERSION)
+	cp $(SOURCES) nosync-browser-$(VERSION)
+	tar -czf nosync-browser-$(VERSION).tar.gz nosync-browser-$(VERSION)
+	rm -r nosync-browser-$(VERSION)

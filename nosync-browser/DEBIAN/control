@@ -1,0 +1,10 @@
+Package: nosync-browser
+Version: 1.0.0-1big2
+Depends:
+Architecture: all
+Maintainer: Bruno Goncalves <www.biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:32
+Description: Nosync-browser works similar to eatmydata, reducing the number of disk writes, but nosync-browser works with Brave, Chrome, Opera, Vivaldi... \n Just use nosync-browser to open your favorite browser, for example: nosync-browser brave-browser
+
