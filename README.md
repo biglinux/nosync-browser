@@ -27,7 +27,7 @@ nosync brave-browser
 
 Nos meus testes em computadores com HD rotacional percebi que grande parte da lentidão dos navegadores está relacionada ao excesso de gravação em disco
 
-Apenas o Firefox e o Chromium funcionaram com o eatmydata, que reduz bastasnte a gravação em disco, mas os navegadores Brave, Chrome, Opera e Vivaldi não funcionaram com o eatmydata
+Apenas o Firefox e o Chromium funcionaram com o eatmydata, que reduz bastante a gravação em disco, mas os navegadores Brave, Chrome, Opera e Vivaldi não funcionaram com o eatmydata
 
 O nosync-browser funcionou em todos os navegadores que testei e também reduz a gravação de dados em disco em torno de 80%, tornando o sistema muito mais responsivo, principalmente com muitas abas abertas
 
