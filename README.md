@@ -22,6 +22,12 @@ Now just use nosync-browser to open your favorite browser, for example:
 
 nosync brave-browser
 
+# Faster
+
+Suggested parameters that make the browser even faster:
+
+--enable-accelerated-2d-canvas --enable-accelerated-mjpeg-decode --enable-accelerated-video --enable-features=MarkHttpAs,StrictOriginIsolation --enable-gpu-rasterization --enable-quic --use-vulkan --ignore-gpu-blocklist --enable-parallel-downloading --font-render-hinting=none --enable-zero-copy --enable-accelerated-video-decode --disable-brave-extension --disable-brave-rewards-extension
+
 
 # Português
 
@@ -43,3 +49,9 @@ Descompacte e execute como root o arquivo install.sh
 Agora é só utilizar o nosync-browser para abrir seu navegador favorito, por exemplo:
 
 nosync brave-browser
+
+# Mais rápido ainda:
+
+Sugestão de parâmetros que deixam o navegador ainda mais rápido:
+
+--enable-accelerated-2d-canvas --enable-accelerated-mjpeg-decode --enable-accelerated-video --enable-features=MarkHttpAs,StrictOriginIsolation --enable-gpu-rasterization --enable-quic --use-vulkan --ignore-gpu-blocklist --enable-parallel-downloading --font-render-hinting=none --enable-zero-copy --enable-accelerated-video-decode --disable-brave-extension --disable-brave-rewards-extension
