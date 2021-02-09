@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 for N in various things you-expect ; do
     echo -n "Checking for $N..."
@@ -6,4 +6,4 @@ for N in various things you-expect ; do
     echo "OK"
 done
 echo "# Configure complete"
-echo "run make install"
+echo "run sudo make install"

@@ -1,4 +1,4 @@
-VERSION=0.1
+VERSION=0.2
 SOURCES=configure  Makefile  nosync  nosync.c  
 
 all: nosync.so
@@ -7,8 +7,8 @@ nosync.so: nosync.c
 	gcc -Wall -fPIC -shared -o nosync.so nosync.c -lc -ldl
 
 install:
-	install -m 0755 nosync /usr/local/bin
-	install -m 0644 nosync.so /usr/local/bin # ya, it sucks and it's lazy
+	install -m 0755 nosync /usr/bin
+	install -m 0644 nosync.so /usr/lib
 
 dist:
 	mkdir nosync-$(VERSION)
