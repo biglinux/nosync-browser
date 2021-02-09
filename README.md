@@ -5,6 +5,10 @@ Original code from https://www.mcgill.org.za/stuff/software/nosync
 
 In my tests on computers with rotational HD I realized that a large part of the browsers' slowness is related to the excessive recording on disk
 
+I do not mean the amount of data stored, but the frequency of recordings, in my tests it was not difficult with some open tabs having situations with 2 GB of data recorded per minute, using the nosync-browser, the reduction was between 80% and 90 %, that's right, from 2 GB went to somewhere between 200 MB to 400 MB
+
+To monitor the recordings I used the command: sudo iotop -Pak
+
 Only Firefox and Chromium worked with eatmydata, which greatly reduces disk recording, but Brave, Chrome, Opera and Vivaldi did not work with eatmydata
 
 Nosync-browser worked on all browsers that I tested and also reduces data writing to disk by around 80%, making the system much more responsive, especially with many tabs open
@@ -32,6 +36,10 @@ Suggested parameters that make the browser even faster:
 # Português
 
 Nos meus testes em computadores com HD rotacional percebi que grande parte da lentidão dos navegadores está relacionada ao excesso de gravação em disco
+
+Não me refiro a quantidade de dados armazenados, mas a frequência de gravações, nos meus testes não foi difícil com algumas abas abertas ter situações com 2 GB de dados gravados por minuto, utilizando o nosync-browser, a redução ficou entre 80% e 90%, isso mesmo, de 2 GB foi para algo em torno de 200 MB a 400 MB
+
+Para monitorar as gravações utilizei o comando: sudo iotop -Pak
 
 Apenas o Firefox e o Chromium funcionaram com o eatmydata, que reduz bastante a gravação em disco, mas os navegadores Brave, Chrome, Opera e Vivaldi não funcionaram com o eatmydata
 
