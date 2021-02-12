@@ -24,7 +24,7 @@ Unzip and run the install.sh file as root
 
 Now just use nosync-browser to open your favorite browser, for example:
 
-nosync brave-browser
+nosync-browser brave-browser
 
 # Faster
 
@@ -56,7 +56,7 @@ Descompacte e execute como root o arquivo install.sh
 
 Agora é só utilizar o nosync-browser para abrir seu navegador favorito, por exemplo:
 
-nosync brave-browser
+nosync-browser brave-browser
 
 # Mais rápido ainda:
 
