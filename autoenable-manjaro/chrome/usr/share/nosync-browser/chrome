@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mv /usr/bin/google-chrome-stable /usr/bin/google-chrome-stable.orig
+
+echo '#!/bin/bash
+exec nosync-browser /usr/bin/google-chrome-stable.orig "$@"' > /usr/bin/google-chrome-stable
+
+chmod +x /usr/bin/google-chrome-stable
