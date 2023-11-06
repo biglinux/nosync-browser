@@ -1,0 +1,24 @@
+# Maintainer: Bruno Goncalves <bigbruno@gmail.com>
+
+pkgname=nosync-browser
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+arch=('any')
+license=('GPL')
+url="https://github.com/biglinux/nosync-browser"
+pkgdesc="Reduce sync to disk and turn your browser faster"
+source=("git+https://github.com/biglinux/nosync-browser.git")
+md5sums=(SKIP)
+
+build() {
+	cd "${srcdir}/nosync-browser/src"
+	make
+}
+
+package() {
+	mkdir -p "${pkgdir}/usr/{bin,lib}"
+	cp -f "${srcdir}/nosync-browser/src/nosync-browser" "${pkgdir}/usr/bin/nosync-browser"
+	cp -f "${srcdir}/nosync-browser/src/nosync-browser.so" "${pkgdir}/usr/lib/nosync-browser.so"
+}
+
+
