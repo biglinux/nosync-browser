@@ -14,12 +14,31 @@ md5sums=(SKIP)
 # 	cd "${srcdir}/nosync-browser/src"
 # 	make
 # }
-
-package() {
+# 
+# package() {
 # 	mkdir -p "${pkgdir}/usr/{bin,lib}"
 # 	cp -f "${srcdir}/nosync-browser/src/nosync-browser" "${pkgdir}/usr/bin/nosync-browser"
 # 	cp -f "${srcdir}/nosync-browser/src/nosync-browser.so" "${pkgdir}/usr/lib/nosync-browser.so"
-		cp -f "${srcdir}/nosync-browser/usr" "${pkgdir}/usr"
+# }
+
+package() {
+    # Verify default folder
+    if [ -d "${srcdir}/${pkgname}/${pkgname}" ]; then
+        InternalDir="${srcdir}/${pkgname}/${pkgname}"
+    else
+        InternalDir="${srcdir}/${pkgname}"
+    fi
+
+    # Copy files
+    if [ -d "${InternalDir}/usr" ]; then
+        cp -r "${InternalDir}/usr" "${pkgdir}/"
+    fi
+
+    if [ -d "${InternalDir}/etc" ]; then
+        cp -r "${InternalDir}/etc" "${pkgdir}/"
+    fi
+
+    if [ -d "${InternalDir}/opt" ]; then
+        cp -r "${InternalDir}/opt" "${pkgdir}/"
+    fi
 }
-
-
