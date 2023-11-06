@@ -10,15 +10,16 @@ pkgdesc="Reduce sync to disk and turn your browser faster"
 source=("git+https://github.com/biglinux/nosync-browser.git")
 md5sums=(SKIP)
 
-build() {
-	cd "${srcdir}/nosync-browser/src"
-	make
-}
+# build() {
+# 	cd "${srcdir}/nosync-browser/src"
+# 	make
+# }
 
 package() {
-	mkdir -p "${pkgdir}/usr/{bin,lib}"
-	cp -f "${srcdir}/nosync-browser/src/nosync-browser" "${pkgdir}/usr/bin/nosync-browser"
-	cp -f "${srcdir}/nosync-browser/src/nosync-browser.so" "${pkgdir}/usr/lib/nosync-browser.so"
+# 	mkdir -p "${pkgdir}/usr/{bin,lib}"
+# 	cp -f "${srcdir}/nosync-browser/src/nosync-browser" "${pkgdir}/usr/bin/nosync-browser"
+# 	cp -f "${srcdir}/nosync-browser/src/nosync-browser.so" "${pkgdir}/usr/lib/nosync-browser.so"
+		cp -f "${srcdir}/nosync-browser/usr" "${pkgdir}/usr"
 }
 
 
